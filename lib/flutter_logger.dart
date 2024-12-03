@@ -7,6 +7,18 @@ import 'package:path_provider/path_provider.dart';
 
 /// Flutter Logger
 class FlutterLogger {
+  static int _maxFileSizeMb = 2;
+
+  /// Set up Flutter Logger
+  /// [maxFileSizeMb] asgas
+  static init({
+    /// Maximum size (in MB) of logs file / when exceeded file will be cleaned up until the file is half of the set size
+    /// Default value is 2MB. If file exceeds 2MB older logs will be deleted until the file is ~ 1MB
+    int maxFileSizeMb = 2,
+  }) {
+    _maxFileSizeMb = maxFileSizeMb;
+  }
+
   static Future<String> get _localPath async {
     Directory directory;
 
@@ -33,13 +45,28 @@ class FlutterLogger {
       '[$tag] $logMessage',
     );
 
-    final file = await _localFile(tag);
+    var file = await _localFile(tag);
     final timestamp = DateTime.now().toIso8601String();
 
     file.writeAsString(
       '$timestamp: $logMessage\n',
       mode: FileMode.append,
     );
+
+    int sizeInBytes = file.lengthSync();
+    double sizeInMb = sizeInBytes / (1024 * 1024);
+    if (sizeInMb > _maxFileSizeMb) {
+      while (sizeInMb > _maxFileSizeMb / 2) {
+        final fileContent = file.readAsLinesSync();
+        final cleanedUpContent = fileContent.sublist(fileContent.length ~/ 10);
+        file.writeAsStringSync(cleanedUpContent.join('\n'),
+            mode: FileMode.write);
+
+        file = await _localFile(tag);
+        sizeInBytes = file.lengthSync();
+        sizeInMb = sizeInBytes / (1024 * 1024);
+      }
+    }
   }
 
   /// Get file reference to log tag (file)
