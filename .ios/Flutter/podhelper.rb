@@ -88,12 +88,12 @@ def install_flutter_application_pod(flutter_application_path)
   flutter_export_environment_path = File.join('${SRCROOT}', relative, 'flutter_export_environment.sh')
 
   # Compile App.framework and move it and Flutter.framework to "BUILT_PRODUCTS_DIR"
-  script_phase name: 'Run Flutter Build flutter_logger Script',
+  script_phase name: 'Run Flutter Build file_logger Script',
     script: "set -e\nset -u\nsource \"#{flutter_export_environment_path}\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build",
     execution_position: :before_compile
 
   # Embed App.framework AND Flutter.framework.
-  script_phase name: 'Embed Flutter Build flutter_logger Script',
+  script_phase name: 'Embed Flutter Build file_logger Script',
     script: "set -e\nset -u\nsource \"#{flutter_export_environment_path}\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin",
     execution_position: :after_compile
 end

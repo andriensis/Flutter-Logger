@@ -1,6 +1,6 @@
 <!-- Generated file. Do not edit. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_logger_module"
+    package="com.example.file_logger_module"
     xmlns:tools="http://schemas.android.com/tools">
   <uses-permission android:name="android.permission.INTERNET"/>
   <application

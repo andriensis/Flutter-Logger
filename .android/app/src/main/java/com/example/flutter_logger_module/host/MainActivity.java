@@ -1,4 +1,4 @@
-package com.example.flutter_logger_module.host;
+package com.example.file_logger_module.host;
 
 import io.flutter.embedding.android.FlutterActivity;
 

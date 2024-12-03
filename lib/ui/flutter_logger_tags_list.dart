@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_logger/flutter_logger.dart';
+import 'package:file_logger/flutter_logger.dart';
 
 /// Page with all available log tags
 class FlutterLoggerTagsList extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_logger/flutter_logger.dart';
+import 'package:file_logger/flutter_logger.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

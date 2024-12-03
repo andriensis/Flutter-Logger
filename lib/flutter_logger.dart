@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_logger/ui/flutter_logger_tags_list.dart';
-import 'package:flutter_logger/ui/flutter_logger_viewer.dart';
+import 'package:file_logger/ui/flutter_logger_tags_list.dart';
+import 'package:file_logger/ui/flutter_logger_viewer.dart';
 import 'package:path_provider/path_provider.dart';
 
 /// Flutter Logger

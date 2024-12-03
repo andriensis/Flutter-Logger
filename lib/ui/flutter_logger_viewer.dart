@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_logger/flutter_logger.dart';
+import 'package:file_logger/flutter_logger.dart';
 import 'package:share_plus/share_plus.dart';
 
 /// Page with all logs for a specific tag
