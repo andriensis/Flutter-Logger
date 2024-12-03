@@ -1,0 +1,44 @@
+{
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+    "editor.codeActionsOnSave": {
+      "quickfix.insertSemicolon": "explicit"
+    }
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#5caeef",
+    "editorBracketHighlight.foreground2": "#dfb976",
+    "editorBracketHighlight.foreground3": "#c172d9",
+    "editorBracketHighlight.foreground4": "#4fb1bc",
+    "editorBracketHighlight.foreground5": "#97c26c",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+  },
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "local": {
+      "apiHost": "api.local.bunte.de"
+    },
+    "develop": {
+      "apiHost": "api-develop.bunte.de"
+    }
+  },
+  "rest-client.logLevel": "verbose",
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true
+  }
+}

@@ -1,0 +1,22 @@
+name: flutter_logger
+description: "A simple flutter logger and viewer"
+homepage: https://github.com/andriensis/Flutter-Logger
+version: 1.0.0
+
+topics:
+  - logging
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  path_provider: ^2.1.5
+  share_plus: ^10.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
