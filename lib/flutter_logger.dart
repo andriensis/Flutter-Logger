@@ -20,7 +20,7 @@ class FlutterLogger {
 
   static Future<File> _localFile(String tag) async {
     final path = await _localPath;
-    return File('$path/$tag.txt');
+    return File('$path/file-logger-$tag.txt');
   }
 
   /// Log a [logMessage] to a log [tag] file
@@ -56,7 +56,11 @@ class FlutterLogger {
     List<String> tagsList = [];
     final files = Directory('${await _localPath}/').listSync();
     for (FileSystemEntity file in files) {
-      tagsList.add(file.uri.pathSegments.last.replaceAll('.txt', ''));
+      final fileName = file.uri.pathSegments.last;
+      if (fileName.startsWith('file-logger-') && fileName.endsWith('.txt')) {
+        tagsList.add(
+            fileName.replaceAll('.txt', '').replaceAll('file-logger-', ''));
+      }
     }
     return Future(() => tagsList);
   }
