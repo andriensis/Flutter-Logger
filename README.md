@@ -27,4 +27,4 @@ FlutterLogger.viewFileForTag('network', context); // show the network tag logs p
 ```
 
 <img src="https://github.com/andriensis/Flutter-Logger/blob/main/doc/log-tags.png?raw=true" alt="Log tags page" width="200"/>
-<img src="https://github.com/andriensis/Flutter-Logger/blob/main/doc/log-page.png?raw=true" alt="Logs page" width="200"/>
+<img src="https://github.com/andriensis/Flutter-Logger/blob/main/doc/log-page.png?raw=true" alt="Logs page showing logs for tealium tag" width="200"/>
