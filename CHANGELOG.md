@@ -1,3 +1,6 @@
+## 1.1.1
+* Add screenshots and readme
+
 ## 1.1.0
 * Logs cleanup logic
 

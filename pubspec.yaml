@@ -1,7 +1,7 @@
 name: file_logger
 description: "A simple flutter file logger with a page to view the stored logs"
 homepage: https://github.com/andriensis/Flutter-Logger
-version: 1.1.0
+version: 1.1.1
 
 topics:
   - logging
